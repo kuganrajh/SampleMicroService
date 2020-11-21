@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wN36qFIAaygZydfPoCIVJjyIZC0eW5fqVdgSH+Po7HLJPM+s+g+rhex9FBXoq87UtY9Fgju8YP45UE/qFo2tSA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kugan\\Downloads\\Basic.MS2\\Basic.MS\\Inventory.Api\\Inventory.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kugan\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "J2/SRlPzhlrztoiZewPeT6y+2Bz/TBwYHkTOW+J9tnmswlFemOXQjf++E7eGsbYsla0X8ouYq63BgyOEf1nKcw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kugan\\Downloads\\Basic.MS2\\Basic.MS\\Order.Api\\Order.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kugan\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}

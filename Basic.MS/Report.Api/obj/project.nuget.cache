@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dFPjfHqlxQfokdu2ir3/W296NRtPpaaE5loJ0CHWt0187U1M/qri1rQKbTZT5AS7ka+hcqkMuAq8y5LM2zwnlQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kugan\\Downloads\\Basic.MS2\\Basic.MS\\Report.Api\\Report.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kugan\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}

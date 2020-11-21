@@ -1,0 +1,141 @@
+services:
+  inventory.api:
+    build:
+      context: C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS
+      dockerfile: Inventory.Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Inventory.Api
+      target: base
+    container_name: Inventory.Api_1
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: inventoryapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/Inventory.Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 61070
+      target: 80
+    - target: 7297
+    tty: true
+    volumes:
+    - C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS\Inventory.Api:/app:rw
+    - C:\Users\Kugan\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Kugan\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Kugan\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\Kugan\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS:/src:rw
+  order.api:
+    build:
+      context: C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS
+      dockerfile: Order.Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Order.Api
+      target: base
+    container_name: Order.Api_1
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: orderapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/Order.Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 61071
+      target: 80
+    - target: 7298
+    tty: true
+    volumes:
+    - C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS\Order.Api:/app:rw
+    - C:\Users\Kugan\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Kugan\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Kugan\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\Kugan\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS:/src:rw
+  report.api:
+    build:
+      context: C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS
+      dockerfile: Report.Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Report.Api
+      target: base
+    container_name: Report.Api
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: reportapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/Report.Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 61072
+      target: 80
+    - target: 7299
+    tty: true
+    volumes:
+    - C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS\Report.Api:/app:rw
+    - C:\Users\Kugan\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Kugan\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Kugan\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\Kugan\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS:/src:rw
+  webgw:
+    build:
+      context: C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS
+      dockerfile: GatewayBase/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: GatewayBase
+      target: base
+    container_name: GatewayBase_3
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: webgw:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/GatewayBase.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 8004
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS\GatewayBase:/app:rw
+    - C:\Users\Kugan\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Kugan\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Kugan\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\Kugan\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\Kugan\Downloads\Basic.MS2\Basic.MS:/src:rw
+version: '3.4'
